@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     bucket = 'ccphotobucket'
     collectionId = 'FaceCollection'
-    fileName = 'jihye.jpg'
+    fileName = 'hyeri_2.jpg'
     threshold = 70
     maxFaces = 2
 

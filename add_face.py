@@ -1,6 +1,5 @@
 import boto3
-
-
+#import cv2
 def add_faces_to_collection(bucket, photo, collection_id):
     client = boto3.client('rekognition')
 
@@ -26,13 +25,18 @@ def add_faces_to_collection(bucket, photo, collection_id):
     return len(response['FaceRecords'])
 
 
-def main():
+def main(photo):
     bucket = 'ccphotobucket'
     collection_id = 'FaceCollection'
-    photo = 'hyeri.png'
-
-    indexed_faces_count = add_faces_to_collection(bucket, photo, collection_id)
-    print("Faces indexed count: " + str(indexed_faces_count))
+    #photo = cv2.imread(p)
+    #print(photo)
+    
+    try:
+        indexed_faces_count = add_faces_to_collection(bucket, photo, collection_id)
+        print("Faces indexed count: " + str(indexed_faces_count))
+    
+    except:
+        print("매치되는 얼굴이 없습니다")
 
 
 if __name__ == "__main__":

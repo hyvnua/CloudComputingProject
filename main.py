@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import add_face 
+import add_face
 import comparison
 import facelist
 #import sys

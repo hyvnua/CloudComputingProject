@@ -3,7 +3,7 @@
 
 import boto3
 
-if __name__ == "__main__":
+def main():
 
     bucket = 'ccphotobucket'
     collectionId = 'FaceCollection'
